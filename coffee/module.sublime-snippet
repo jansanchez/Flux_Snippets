@@ -1,0 +1,50 @@
+<snippet>
+<content><![CDATA[
+###
+${4:Module description}
+@class ${1:${TM_FILENAME/(.*)[.](.*)/$1/g}}
+@main ${3:${TM_FILEPATH/([a-zA-Z0-9\_\-]+[\/][a-zA-Z0-9\_\-]+)([\/]{1}[a-zA-Z0-9\_\-]+[\.]{1}.*)/$1/g}}
+@author ${5:$TM_FULLNAME}
+###
+
+yOSON.AppCore.addModule "${1:${TM_FILENAME/(.*)[.](.*)/$1/g}}", (Sb) ->
+    defaults = {
+        parent      : "${8}"
+        el          : "${9}"
+    }
+    st = {
+        ${6} : "${7}"
+    }
+    dom = {}
+
+    catchDom = () ->
+        dom.parent = \$(st.parent)
+        dom.el     = \$(st.el, dom.parent)
+        return
+    suscribeEvents = () ->
+        dom.el.on "click",   events.${10:camelCase}
+        return
+
+    events = {
+        ${10:camelCase} : (e) ->
+            console.log(e)
+    }
+    fn = {
+        ${11:functionName} : () ->
+            ${12:console.log("example")}
+            return
+    }
+    initialize = (opts) ->
+        st = \$.extend({}, defaults, opts)
+        catchDom()
+        suscribeEvents()
+        return
+
+    return {
+        init: initialize
+    }
+,["${13}"]
+]]></content>
+<tabTrigger>add</tabTrigger>
+<scope>source.coffee</scope>
+</snippet>
