@@ -1,0 +1,18 @@
+<snippet>
+<content><![CDATA[
+/*!!
+ *
+ * @controller : ${1:${TM_FILENAME/(.*)[.](.*)/$1/g}}
+ * @module     : ${2:${TM_FILEPATH/([a-zA-Z0-9\_\-]+[\/|\\][a-zA-Z0-9\_\-]+)([\/|\\]{1}[a-zA-Z0-9\_\-]+[\.]{1}.*)/$1/g}}
+ * @author     : ${3:$TM_FULLNAME}
+ *
+ */
+
+@require '../../_config/*'
+@require '../../_mixins/*'
+
+${4}
+]]></content>
+<tabTrigger>controller</tabTrigger>
+<scope>source.styl</scope>
+</snippet>

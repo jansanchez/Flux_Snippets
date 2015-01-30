@@ -1,0 +1,16 @@
+<snippet>
+<content><![CDATA[
+/*!!
+ *
+ * @view       : ${1}
+ * @controller : ${2:${TM_FILENAME/(.*)[.](.*)/$1/g}}
+ * @module     : ${3:${TM_FILEPATH/([a-zA-Z0-9\_\-]+[\/|\\][a-zA-Z0-9\_\-]+)([\/|\\]{1}[a-zA-Z0-9\_\-]+[\.]{1}.*)/$1/g}}
+ * @author     : ${4:$TM_FULLNAME}
+ *
+ */
+
+${4}
+]]></content>
+<tabTrigger>view</tabTrigger>
+<scope>source.styl</scope>
+</snippet>
