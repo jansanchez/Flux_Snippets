@@ -14,5 +14,5 @@
 ${4}
 ]]></content>
 <tabTrigger>controller</tabTrigger>
-<scope>source.css</scope>
+<scope>source.styl</scope>
 </snippet>
