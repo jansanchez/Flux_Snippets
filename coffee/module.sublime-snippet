@@ -12,9 +12,7 @@ yOSON.AppCore.addModule "${1:${TM_FILENAME/(.*)[.](.*)/$1/g}}", (Sb) ->
         parent      : "${8}"
         el          : "${9}"
     }
-    st = {
-        ${6} : "${7}"
-    }
+    st = {}
     dom = {}
 
     catchDom = () ->
