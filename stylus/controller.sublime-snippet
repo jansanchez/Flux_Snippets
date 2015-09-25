@@ -14,5 +14,5 @@
 ${4}
 ]]></content>
 <tabTrigger>controller</tabTrigger>
-<scope>source.styl</scope>
+<scope>source.stylus</scope>
 </snippet>
